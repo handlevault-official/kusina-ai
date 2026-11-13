@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viral Food Caption & Promo AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+              }
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased">
-    <div class="max-w-4xl mx-auto px-4 py-10">
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased flex flex-col justify-between p-4 sm:p-6">
+    <div class="max-w-4xl mx-auto w-full py-6">
         <!-- Header -->
         <header class="text-center mb-10">
             <span class="bg-red-500/10 text-red-400 text-xs font-semibold px-3 py-1 rounded-full border border-red-500/20 uppercase tracking-wider">AI-Powered Food Marketing Suite</span>
-            <h1 class="text-4xl sm:text-5xl font-extrabold mt-3 tracking-tight bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
+            <h1 class="text-3xl sm:text-5xl font-extrabold mt-3 tracking-tight bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
                 Viral Food Caption & Promo Generator
             </h1>
             <p class="text-slate-400 mt-2 max-w-xl mx-auto text-sm sm:text-base">
-                Gumawa ng nakakatakam na Taglish captions, TikTok hooks, at promo broadcasts sa loob lang ng ilang segundo. Palakasin ang benta ng pagkain mo ngayon!
+                Gumawa ng nakakatakam na Taglish captions, TikTok hooks, at promo broadcasts sa loob lang ng ilang segundo.
             </p>
+            <div class="mt-4">
+                <a href="https://vaultkeeper117.gumroad.com/l/ztzxpg" target="_blank" rel="noopener noreferrer" class="inline-block bg-pink-600 hover:bg-pink-500 text-white text-xs font-semibold py-2 px-4 rounded-xl transition shadow-lg">
+                    🛒 Get Full Access on Gumroad ($5-$6)
+                </a>
+            </div>
         </header>
 
         <!-- Main Card -->
@@ -85,12 +106,12 @@
                 <div id="captionsContainer" class="space-y-4"></div>
             </div>
         </main>
-
-        <!-- Footer -->
-        <footer class="text-center mt-10 text-xs text-slate-500">
-            &copy; Viral Food Caption & Promo AI. Universal Store Ready (Whop / Gumroad).
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-slate-500 border-t border-slate-900 mt-10">
+        &copy; 2026 Viral Food Caption & Promo AI. HandleVault Official Ecosystem.
+    </footer>
 
     <script src="script.js"></script>
 </body>
