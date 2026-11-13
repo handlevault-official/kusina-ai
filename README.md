@@ -1,10 +1,8 @@
-# 🍔 Kusina AI 
-
----
-
-- Viral Food Caption & Promo Generator
+# 🍔 Kusina AI - Viral Food Caption & Promo Generator
 
 An AI-powered web application designed for Filipino food business owners, online sellers, and food parks to generate high-converting Taglish captions, TikTok hooks, and promotional broadcasts in seconds using Google Gemini AI.
+
+🌐 **Live App:** [https://handlevault-official.github.io/kusina-ai/](https://handlevault-official.github.io/kusina-ai/)
 
 ---
 
@@ -21,7 +19,7 @@ An AI-powered web application designed for Filipino food business owners, online
 - **Hosting:** GitHub Pages
 
 ## 🛠️ How to Use
-1. Visit the live web app link (e.g., `https://[your-username].github.io/kusina-ai/`).
+1. Visit the live app: [https://handlevault-official.github.io/kusina-ai/](https://handlevault-official.github.io/kusina-ai/)
 2. Enter your **Google Gemini API Key**.
 3. Type your food item name, price or promo details, target platform, and marketing vibe.
 4. Click **Generate Viral Captions Now** and copy your favorite result!
