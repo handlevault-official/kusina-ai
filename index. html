@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Food Caption & Promo AI</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --primary-dark: #e84118;
+            --bg: #f8f9fa;
+            --card: #ffffff;
+            --text: #2f3542;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 580px;
+            width: 100%;
+            background: var(--card);
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        .badge {
+            display: inline-block;
+            background: #ffeaa7;
+            color: #d35400;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        h2 { margin: 0 0 6px 0; font-size: 24px; color: #1e272e; }
+        p.subtitle { margin: 0 0 20px 0; color: #57606f; font-size: 14px; }
+        label { font-weight: 600; display: block; margin-top: 14px; margin-bottom: 6px; font-size: 13px; }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #dfe4ea;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border 0.2s;
+        }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        button.generate-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            margin-top: 22px;
+            transition: background 0.2s;
+        }
+        button.generate-btn:hover { background: var(--primary-dark); }
+        button.generate-btn:disabled { background: #a4b0be; cursor: not-allowed; }
+        #resultArea { margin-top: 22px; display: none; }
+        #response {
+            white-space: pre-wrap;
+            background: #f1f2f6;
+            padding: 16px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .copy-btn {
+            width: 100%;
+            background: #2f3542;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <span class="badge">🔥 FOOD SELLER MARKETING TOOL</span>
+    <h2>Viral Food Caption & Promo AI</h2>
+    <p class="subtitle">Gumawa ng nakakatakam na captions at promo posts sa loob ng 3 segundo.</p>
+    
+    <label for="foodItem">1. Anong pagkain o inumin ang ibebenta?</label>
+    <input type="text" id="foodItem" placeholder="Hal. Creamy Baked Sushi, Ube Pandesal, Iced Spanish Latte" />
+
+    <label for="offerDetails">2. Presyo o Promo Offer (Optional)</label>
+    <input type="text" id="offerDetails" placeholder="Hal. ₱180/tub, Free Delivery sa malapit, Limited 20 boxes lang" />
+
+    <label for="platform">3. Saan mo ipo-post?</label>
+    <select id="platform">
+        <option value="Facebook & Instagram Post (with hashtags)">Facebook & Instagram Post</option>
+        <option value="TikTok / Reels Short Hook & Video Caption">TikTok / Reels Script & Hook</option>
+        <option value="Messenger / Viber Broadcast Message para sa suki">Messenger / Viber Broadcast sa Suki</option>
+    </select>
+
+    <label for="vibe">4. Anong style ng caption?</label>
+    <select id="vibe">
+        <option value="Nakakatakam at pang-cravings (Mouth-watering sensory words)">🤤 Nakakatakam (Cravings Mode)</option>
+        <option value="Witty, nakakatawa, at relatable sa Pinoy">😂 Witty / Nakakatawa (Relatable)</option>
+        <option value="Urgent / Limited Slots para mapilitang mag-order agad">⚡ Urgent / FOMO (Limited Slots)</option>
+    </select>
+    
+    <button id="genBtn" class="generate-btn" onclick="generateCaption()">✨ Gumawa ng 3 Viral Captions</button>
+    
+    <div id="resultArea">
+        <div id="response"></div>
+        <button id="copyBtn" class="copy-btn" onclick="copyText()">📋 Kopyahin Lahat ng Captions</button>
+    </div>
+</div>
+
+<script type="module" src="secret.js"></script>
+</body>
+</html>
