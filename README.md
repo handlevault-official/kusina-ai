@@ -1,4 +1,4 @@
-# Viral-Food-Caption-Promo-Generator
+# viral-food-caption-promo-generator
 AI-powered social media caption, TikTok hook, and promo generator for small food businesses.
 
 <div align="center">
