@@ -1,8 +1,8 @@
 import { GoogleGenAI } from "https://esm.run/@google/genai";
 
 // ILAGAY DITO ANG IYONG GEMINI API KEY MULA SA GOOGLE AI STUDIO
-// Palitan ang "YOUR_API_KEY_DITO" ng iyong totoong Gemini API key
-const apiKey = "YOUR_API_KEY_DITO"; 
+// Palitan ang "AQAb8RN6KlYrbyIGdVfa6KvuwS9fE0E_X8nMNBELPCCiPP88bBQ" ng iyong totoong Gemini API key
+const apiKey = "AQAb8RN6KlYrbyIGdVfa6KvuwS9fE0E_X8nMNBELPCCiPP88bBQ"; 
 
 const ai = new GoogleGenAI({ apiKey: apiKey });
 
