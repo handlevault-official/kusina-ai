@@ -1,0 +1,27 @@
+VIRAL FOOD CAPTION & PROMO AI - SYSTEM REQUIREMENTS & SPECIFICATIONS
+1. Technical Stack & Architecture
+Frontend Framework: Pure HTML5, CSS3 (Modern Flexbox, CSS Variables, Responsive Design)
+Scripting: Vanilla JavaScript (ES6 Modules)
+AI Engine: Google Gemini API via Google Gen AI Web SDK (https://esm.run/@google/genai)
+Model: gemini-2.5-flash
+Hosting: GitHub Pages (Static site hosting, free tier)
+Monetization & Delivery: Whop Marketplace App Integration
+2. Core Functional Requirements
+Input Fields:
+1. Food/Beverage Item name (Text input, required)
+2. Price or Promo Offer details (Text input, optional)
+3. Platform selector (Facebook/Instagram, TikTok/Reels, Messenger/Viber Broadcast)
+4. Vibe/Tone selector (Cravings Mode, Witty/Relatable, Urgent/FOMO)
+AI Generation:
+Generates 3 distinct Taglish social media caption options with emojis, CTAs, and hashtags.
+UI/UX Features:
+Loading state ("Nagluluto ng captions...") during API calls.
+1-Click Copy-to-Clipboard functionality with visual feedback.
+Mobile-responsive layout optimized for both mobile phones and desktop embedding.
+3. Security & Deployment Requirements
+API Key Protection:
+Gemini API key must be restricted in Google AI Studio via Website Restrictions (https://<username>.github.io/* and https://*.whop.com/*).
+Deployment Workflow:
+Repository name: matina-dashboard-viral
+Required files: index.html, secret.js, README.md, requirements.txt
+GitHub Pages enabled on main branch.
