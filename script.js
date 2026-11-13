@@ -1,16 +1,11 @@
-document.getElementById('generatorForm').addEventListener('submit', async (e) => {
+document.getElementById('generatorForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    
+
     const apiKey = document.getElementById('apiKey').value.trim();
     const foodItem = document.getElementById('foodItem').value.trim();
     const promoDetails = document.getElementById('promoDetails').value.trim();
     const platform = document.getElementById('platform').value;
     const vibe = document.getElementById('vibe').value;
-    
-    if (!apiKey) {
-        alert('Please enter your Gemini API Key.');
-        return;
-    }
 
     const loadingEl = document.getElementById('loading');
     const resultsEl = document.getElementById('results');
@@ -20,66 +15,39 @@ document.getElementById('generatorForm').addEventListener('submit', async (e) =>
     resultsEl.classList.add('hidden');
     containerEl.innerHTML = '';
 
-    const prompt = `You are an expert food marketing copywriter in the Philippines. Generate exactly 3 distinct, high-converting Taglish social media captions for a food business.
-    
-Food Item: ${foodItem}
-Price/Promo: ${promoDetails || 'Standard offering'}
-Platform: ${platform}
-Vibe/Tone: ${vibe}
-
-Format the response as 3 clear options separated strictly by '---OPTION---'. Include relevant emojis, engaging hooks, clear Call-To-Action (CTA), and viral hashtags.`;
+    const prompt = `Act as an expert food marketer in the Philippines. Generate 3 viral ${platform} captions in Taglish for a food business item: "${foodItem}" with promo details: "${promoDetails}". Tone/Vibe: ${vibe}. Make it engaging, mouth-watering, include emojis and relevant hashtags. Format output clearly with option numbers.`;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }]
+                contents: [{
+                    parts: [{ text: prompt }]
+                }]
             })
         });
 
         const data = await response.json();
-        
-        if (data.error) {
-            throw new Error(data.error.message || 'API Error');
-        }
-
-        const text = data.candidates[0].content.parts[0].text;
-        const options = text.split('---OPTION---').filter(opt => opt.trim().length > 0);
-
-        options.forEach((opt, index) => {
-            const card = document.createElement('div');
-            card.className = 'bg-slate-950 border border-slate-800 rounded-xl p-5 relative group';
-            
-            card.innerHTML = `
-                <div class="flex justify-between items-center mb-3">
-                    <span class="text-xs font-semibold text-red-400 uppercase tracking-wider">Option ${index + 1}</span>
-                    <button onclick="copyCaption(this)" 
-                        class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1 rounded-md transition flex items-center gap-1.5 cursor-pointer">
-                        <i class="fa-regular fa-copy"></i> Copy
-                    </button>
-                </div>
-                <div class="caption-text text-slate-300 text-sm whitespace-pre-line leading-relaxed font-normal">${opt.trim()}</div>
-            `;
-            containerEl.appendChild(card);
-        });
-
-        resultsEl.classList.remove('hidden');
-    } catch (error) {
-        alert('Error generating captions: ' + error.message);
-    } finally {
         loadingEl.classList.add('hidden');
+
+        if (data.candidates && data.candidates[0].content) {
+            const rawText = data.candidates[0].content.parts[0].text;
+            
+            resultsEl.classList.remove('hidden');
+            containerEl.innerHTML = `
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-300 whitespace-pre-line leading-relaxed">
+                    ${rawText}
+                </div>
+            `;
+        } else {
+            alert('May error sa pag-generate. Siguraduhing tama ang iyong Gemini API Key.');
+        }
+    } catch (error) {
+        loadingEl.classList.add('hidden');
+        alert('Connection error. Pakisubukan muli.');
+        console.error(error);
     }
 });
-
-function copyCaption(button) {
-    const textElement = button.parentElement.nextElementSibling;
-    navigator.clipboard.writeText(textElement.innerText).then(() => {
-        const originalHTML = button.innerHTML;
-        button.innerHTML = '<i class="fa-solid fa-check text-green-400"></i> Copied!';
-        setTimeout(() => {
-            button.innerHTML = originalHTML;
-        }, 2000);
-    });
-}
- 
