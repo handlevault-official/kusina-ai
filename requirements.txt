@@ -22,6 +22,6 @@ Mobile-responsive layout optimized for both mobile phones and desktop embedding.
 API Key Protection:
 Gemini API key must be restricted in Google AI Studio via Website Restrictions (https://<username>.github.io/* and https://*.whop.com/*).
 Deployment Workflow:
-Repository name: matina-dashboard-viral
+Repository name: viral food caption promo generator
 Required files: index.html, secret.js, README.md, requirements.txt
 GitHub Pages enabled on main branch.
