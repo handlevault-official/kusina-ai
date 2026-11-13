@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viral Food Caption & Promo AI</title>
+    <title>Kusina AI - Viral Food Caption & Promo Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,7 +12,7 @@
         <header class="text-center mb-10">
             <span class="bg-red-500/10 text-red-400 text-xs font-semibold px-3 py-1 rounded-full border border-red-500/20 uppercase tracking-wider">AI-Powered Food Marketing Suite</span>
             <h1 class="text-3xl sm:text-5xl font-extrabold mt-3 tracking-tight bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Viral Food Caption & Promo Generator
+                Kusina AI - Viral Food Caption Generator
             </h1>
             <p class="text-slate-400 mt-2 max-w-xl mx-auto text-sm sm:text-base">
                 Gumawa ng nakakatakam na Taglish captions, TikTok hooks, at promo broadcasts sa loob lang ng ilang segundo.
@@ -82,7 +82,7 @@
     </div>
 
     <footer class="text-center py-6 text-xs text-slate-500 border-t border-slate-900 mt-10">
-        &copy; 2026 Viral Food Caption & Promo AI. HandleVault Official Ecosystem.
+        &copy; 2026 Kusina AI. HandleVault Official Ecosystem.
     </footer>
 
     <script>
