@@ -41,3 +41,13 @@ Instead of spending hours thinking about what to post on social media, sellers s
 ├── secret.js       # Google Gemini API integration and prompt logic
 └── README.md       # Project documentation
 
+🚀 Quick Setup & Usage
+1. Clone or Download this repository.
+2. Add your Google Gemini API key inside secret.js.
+3. Open index.html in any web browser or deploy it instantly via GitHub Pages.
+4. Package and distribute securely through your Whop storefront.
+🛒 Whop Storefront Integration
+Main Store: [Link to your Whop Store]
+Support & Updates: For inquiries or updates regarding this mini-app, reach out via our community hub.
+🔒 License
+Distributed under the MIT License. Securely licensed for buyers via Whop.
