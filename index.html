@@ -155,7 +155,7 @@ Lagyan ng nakakatakam na description, emojis, malinaw na Call-to-Action (CTA), a
                     container.appendChild(card);
                 });
 
-                results.classList.remove('hidden');
+                        results.classList.remove('hidden');
             } catch (err) {
                 alert('Error: ' + err.message);
             } finally {
@@ -163,6 +163,10 @@ Lagyan ng nakakatakam na description, emojis, malinaw na Call-to-Action (CTA), a
                 btn.disabled = false;
             }
         });
-    </script>
+    </script> <!-- 1. Isara muna nang tuluyan ang JavaScript block dito -->
+
+    <!-- 2. I-link ang repo.js sa labas ng script block -->
+    <script src="repo.js"></script>
+
 </body>
 </html>
